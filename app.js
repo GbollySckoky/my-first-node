@@ -1,23 +1,28 @@
-// __dirname === path to current directory
-// __filename === file name
-// require === function to use module. it also works like an import 
-// module === info about current module
-// process === info about env where the program is being executed
+// BUILT IN MODULES 
+// OPERTING SYSTEM
+// FILE SYSTEM
+// HTTP SERVER 
+// PATH
 
-// --- MODULES ---
-// CommonJS - Every file in node.js is a module (by default)
-// Modules -  Encapsulated Code (only share minimum)
-// to export a module or make it accessable you need to (module.export)
-// module.exports is an object
-// when declaring a function in module you do not need to add module.exports u can just invoke it e.g addValues()
-const activate = require('./1-utils')
-const values = require('./1-module')
-const bigValues = require('./alternative-flow')
-require('./1-utils')
+/**
+ * LETS START WITH OS**/
+const os = require("os")
 
-// console.log(values)
-activate(values.name)
-activate(values.tutor)
-activate(values.purpose)
-console.log("ALternative", bigValues)
-console.log(activate)
+// info about the current user of the system
+const user = os.userInfo()
+console.log(user)
+
+// uptime of the system
+// const aboutUser = os.user()
+console.log(`The system hostname is ${os.hostname()}`)
+
+const currentOs = {
+    name: os.type(),
+    freeMemory: os.freemem(),
+    type: os.type(),
+    upTime: os.uptime(),
+    version: os.version(),
+    totalMemory: os.totalmem()
+}
+
+console.log(currentOs, "CurrentOs")
