@@ -4,25 +4,28 @@
 // HTTP SERVER 
 // PATH
 
-/**
- * LETS START WITH OS**/
-const os = require("os")
+// HTTP
 
-// info about the current user of the system
-const user = os.userInfo()
-console.log(user)
+const http = require('http')
 
-// uptime of the system
-// const aboutUser = os.user()
-console.log(`The system hostname is ${os.hostname()}`)
+const SERVER = http.createServer((req, res) => {
+    console.log(req)
+    if(req.url === '/'){
+        res.end('yebo!!')
+    }
+    if(req.url === '/about'){
+        res.end('Thank God!!')
+    }
+    res.end(
+        `<h1>Oops!! </h1>`
+    )  // if users is trying to access a file or route that doesn't exist this is the 404 paga or response
+    // res.write('HELLO WORLD')
+    // res.end()
+})
 
-const currentOs = {
-    name: os.type(),
-    freeMemory: os.freemem(),
-    type: os.type(),
-    upTime: os.uptime(),
-    version: os.version(),
-    totalMemory: os.totalmem()
-}
+SERVER.listen(4000)
 
-console.log(currentOs, "CurrentOs")
+// NPM
+// PACKAGE.JSON 
+// TO SWET UP MY PACKAGE.JSON I NEED TO RUN npm init or npm init -y
+// NPM INSTALLS PACKAGES INTO NODE MODULES MEANING  NPM CREATES node_modules 

@@ -1,0 +1,15 @@
+{
+  "name": "tutorial",
+  "version": "1.0.0",
+  "description": "// __dirname === path to current directory // __filename === file name // require === function to use module. it also works like an import  // module === info about current module // process === info about env where the program is being executed",
+  "main": "1-intro.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "loadash": "^1.0.0"
+  }
+}
