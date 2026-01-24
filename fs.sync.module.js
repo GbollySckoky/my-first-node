@@ -8,7 +8,7 @@
 // FS ASYNC RUNS DOES NOT RUN LINE BY LINE IT RENDERS THE AVAILABLE CODE OR RESPONSE 
 
 // sync
-const {readFileSync, writeFileSync,} = require('fs')
+const {readFileSync, writeFileSync} = require('fs')
 
 console.log("Hello")
 const readFile = readFileSync('../tutorial/folder/first.txt', "utf8")
@@ -22,4 +22,5 @@ writeFileSync('./folder/writeNewText.txt',
 )
 
 console.log("HEY")
+
 
